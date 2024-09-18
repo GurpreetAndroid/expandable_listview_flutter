@@ -11,7 +11,7 @@ List dataList = [
   },
   {
     "category": "Electronics",
-    "icon": Icons.store,
+    "icon": Icons.ad_units,
     "subCategory": [
       {
         "category": "Camera & Accessories",
