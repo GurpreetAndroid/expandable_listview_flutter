@@ -30,7 +30,7 @@ class HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black87,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text("Expandable ListView", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),),
+        title: const Text("Expandable ListView", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),),
       ),
       body: ListView.builder(
         itemCount: listData.length,
@@ -57,13 +57,13 @@ class HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                    margin: EdgeInsets.only(bottom: 0.0),
-                    accountName: Text('Gurpreet Singh', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400)),
-                    accountEmail: Text('gurpreet.singh@xyz.com', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400))
+                    margin: const EdgeInsets.only(bottom: 0.0),
+                    accountName: const Text('Gurpreet Singh', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400)),
+                    accountEmail: const Text('gurpreet.singh@xyz.com', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400))
                 ),
                 ListView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: listData.length,
                   itemBuilder: (context, index) {
                     return _buildList(listData[index]);
@@ -82,7 +82,7 @@ class HomeScreenState extends State<HomeScreen> {
           builder: (context) {
             return ListTile(
                 onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SubCategory(list.category))),
-                leading: SizedBox(),
+                leading: const SizedBox(),
                 title: Text(list.category)
             );
           }
@@ -92,7 +92,7 @@ class HomeScreenState extends State<HomeScreen> {
         leading: Icon(list.icon),
         title: Text(
           list.category,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         children: list.subCategory.map(_buildList).toList(),
       );
